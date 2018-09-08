@@ -1,0 +1,57 @@
+
+<ion-header>
+  <ion-navbar>
+   <ion-title>Scriptum Manager</ion-title>
+  </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+  
+    
+    <ion-item>
+  <button ion-button  full (click)="selectfonte()">Selecionar Foto</button></ion-item>
+  <ion-item>
+  <button ion-button  full (click)="reconhecerfoto()"[disabled]="!selectFoto" >Reconhecer Foto</button>
+  </ion-item>
+  <img [src]="selectFoto" *ngIf="selectFoto">
+  
+ 
+  <ion-card *ngIf="imageText">
+  
+  <ion-card-header>Texto da imagem</ion-card-header>
+  
+  <ion-card-content>
+  
+  {{ imageText }}
+  
+  </ion-card-content>
+  
+  
+  
+  
+  </ion-card>
+  
+  
+  </ion-content>
+  <!--
+    <ion-footer>
+  
+    <div padding>
+  
+      <ion-segment [(ngModel)]="opt-footer">
+  
+        <ion-segment-button color="primary"  value="camera">
+          Camera
+          <ion-icon name="camera"></ion-icon>
+        </ion-segment-button>
+  
+        <ion-segment-button color="primary"  value="nuvem">
+          Nuvem
+          <ion-icon name="cloud"></ion-icon>
+        </ion-segment-button>
+  
+      </ion-segment>
+  
+    </div>
+    
+  </ion-footer>
+  -->
